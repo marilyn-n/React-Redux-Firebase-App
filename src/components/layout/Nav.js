@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SignInLinks from './SignInLinks';
 import SignOutLinks from './SignOutLinks';
 
@@ -9,7 +9,7 @@ const Sidebar = () => {
       <div>
         <ul className="navbar bg-dark boots-navbar">
           <li className="nav-item">
-            <Link to="/" className="nav-link">Dashboard</Link>
+            <NavLink to="/" className="nav-link">Dashboard</NavLink>
           </li>
           <SignInLinks/>
           <SignOutLinks/>

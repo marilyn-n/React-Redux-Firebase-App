@@ -20,7 +20,7 @@ class SignIn extends Component {
 
   render() {
     return (
-      <div className="container col-md-6 offset-md-3">
+      <div className="signin jumbotron">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Email address</label>
@@ -31,7 +31,9 @@ class SignIn extends Component {
             <label>Password</label>
             <input type="password" className="form-control" id="password" onChange={this.handleChange} placeholder="Password"/>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <div className="text-center">
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </div>
         </form>
       </div>
     );

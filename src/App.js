@@ -20,7 +20,7 @@ function App() {
           <Route path="/project/:id" component={ ProjectDetails }/>
           <Route path="/signin" component={ SignIn }/>
           <Route path="/signup" component={ SignUp }/>
-          <Route path="/create-new" component={ CreateProject }/>
+          <Route path="/create" component={ CreateProject }/>
         </Switch>
       </BrowserRouter>
     </div>

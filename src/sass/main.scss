@@ -1,6 +1,17 @@
 @import './vars';
 // views
 @import './views/dashboard';
+@import './views/signin.scss';
+@import './views/signup.scss';
 
 // components
 @import './components/navbar.scss';
+
+html {
+  min-height: 100%;
+  body {
+    min-height: 100%;
+  }
+
+}
+

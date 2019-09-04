@@ -21,6 +21,7 @@ class CreateProject extends Component {
   render() {
     return (
       <div className="container col-md-6 offset-md-3 create-project">
+        <h5>Create new project</h5>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="title" className="col-form-label">Title</label>
