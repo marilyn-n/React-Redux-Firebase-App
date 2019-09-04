@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 
 class SignIn extends Component {
+  state = {
+    email: '',
+    password: ''
+  }
   
-  handleSubmit = (e) => {
-    console.log(e);
-    
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
   }
 
-  handleChange = (e) => {
-    console.log(e);
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
     
   }
 
@@ -18,16 +24,12 @@ class SignIn extends Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Email address</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" onChange={this.handleChange} aria-describedby="emailHelp" placeholder="Enter email"/>
+            <input type="email" className="form-control" id="email" onChange={this.handleChange} aria-describedby="emailHelp" placeholder="Enter email"/>
             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" onChange={this.handleChange} placeholder="Password"/>
-          </div>
-          <div className="form-group form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-            <label className="form-check-label">Check me out</label>
+            <input type="password" className="form-control" id="password" onChange={this.handleChange} placeholder="Password"/>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
