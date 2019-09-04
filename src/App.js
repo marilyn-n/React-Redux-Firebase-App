@@ -4,6 +4,8 @@ import Nav from './components/layout/Nav';
 import './sass/main.scss';
 import Dashboard from './components/dashboard/Dashboard';
 import ProjectDetails from './components/projects/ProjectDetails';
+import CreateProject from './components/projects/CreateProject';
+
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 
@@ -18,6 +20,7 @@ function App() {
           <Route path="/project/:id" component={ ProjectDetails }/>
           <Route path="/signin" component={ SignIn }/>
           <Route path="/signup" component={ SignUp }/>
+          <Route path="/create-new" component={ CreateProject }/>
         </Switch>
       </BrowserRouter>
     </div>
