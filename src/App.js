@@ -3,7 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Nav from './components/layout/Nav';
 import './sass/main.scss';
 import Dashboard from './components/dashboard/Dashboard';
-import CreateProject from './components/projects/CreateProject';
+import ProjectDetails from './components/projects/ProjectDetails';
+import SignIn from './components/auth/SignIn';
 
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
       <BrowserRouter>
         <Nav/>
         <Switch>
-          <Route path="/" component={ Dashboard }/>
-          <Route path="/new-project" component={ CreateProject }/>
+          <Route exact path="/" component={ Dashboard }/>
+          <Route path="/project/:id" component={ ProjectDetails }/>
+          <Route path="/signin" component={ SignIn }/>
         </Switch>
       </BrowserRouter>
     </div>

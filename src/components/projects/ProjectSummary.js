@@ -1,5 +1,4 @@
 import React from 'react';
-import ProjectDetails from './ProjectDetails';
 
 const ProjectSummary = () => {
   return (
@@ -12,7 +11,6 @@ const ProjectSummary = () => {
         <div className="card-body">
           <span className="card-link">3rd September, 3am</span>
         </div>
-        <ProjectDetails/>
       </div>
       
     </div>
