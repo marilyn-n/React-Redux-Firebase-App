@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import SignInLinks from './SignInLinks';
 import SignOutLinks from './SignOutLinks';
+import { connect } from 'react-redux';
 
 
 const Sidebar = () => {
@@ -18,4 +19,11 @@ const Sidebar = () => {
     );
 }
 
-export default Sidebar;
+const mapStateToProps = (state) => {
+  return {
+
+  }
+  
+}
+
+export default connect(mapStateToProps)(Sidebar);
