@@ -9,7 +9,7 @@ const ProjectDetails = (props) => {
     return (
       <div className="container project-details">
         <div className="card">
-          <div class="card-header">
+          <div className="card-header">
           { project.title }
           </div>
           <div className="card-body">
@@ -17,9 +17,9 @@ const ProjectDetails = (props) => {
             <p className="card-text">{ project.content }</p>
             <span className="btn btn-primary">Go somewhere</span>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Created by { project.authorFirstName } - { project.authorLastName }</li>
-            <li class="list-group-item">Created at 2 sep 2019</li>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Created by { project.authorFirstName } - { project.authorLastName }</li>
+            <li className="list-group-item">Created at 2 sep 2019</li>
           </ul>
         </div> 
       </div>
