@@ -5,15 +5,16 @@ import SignOutLinks from './SignOutLinks';
 import { connect } from 'react-redux';
 
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const { auth } = props;
+    const links = auth.uid ? <SignInLinks/> : <SignOutLinks/>
     return (
       <div>
         <ul className="navbar bg-dark boots-navbar">
           <li className="nav-item">
             <NavLink to="/" className="nav-link">Dashboard</NavLink>
           </li>
-          <SignInLinks/>
-          <SignOutLinks/>
+          { links }
         </ul>
       </div>
     );
@@ -21,9 +22,8 @@ const Sidebar = () => {
 
 const mapStateToProps = (state) => {
   return {
-
+    auth: state.firebase.auth
   }
-  
 }
 
 export default connect(mapStateToProps)(Sidebar);
