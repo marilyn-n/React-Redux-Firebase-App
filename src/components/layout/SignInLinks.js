@@ -4,6 +4,8 @@ import { singOut } from '../../store/actions/authActions';
 import { connect } from 'react-redux';
 
 const SignInLinks = (props) => {
+  console.log(props, '**pp');
+  
     return (
       <ul className="nav justify-content-end">
         <li className="nav-item">
@@ -16,7 +18,7 @@ const SignInLinks = (props) => {
           <div className="dropdown-menu boots-dropdown" aria-labelledby="navbarDropdownMenuLink">
             <Link to="/" className="dropdown-item">Action</Link>
             <Link to="/" className="dropdown-item">Another action</Link>
-            <a href="#" className="dropdown-item" onClick={props.singOut}>Sign out</a>
+            <a href="-" className="dropdown-item" onClick={props.singOut}>Sign out</a>
           </div>
         </div>
       </ul>

@@ -7,7 +7,7 @@ class SignUp extends Component {
   state = {
     email: '',
     password: '',
-    name: '',
+    firstName: '',
     lastName: ''
   }
   
@@ -31,11 +31,11 @@ class SignUp extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label>Name</label>
-              <input type="name" className="form-control" id="name" onChange={this.handleChange} aria-describedby="nameHelp" placeholder="Enter your name"/>
+              <input type="text" className="form-control" id="firstName" onChange={this.handleChange} aria-describedby="lastNameHelp" placeholder="Enter your name"/>
             </div>
             <div className="form-group">
               <label>Last Name</label>
-              <input type="last-name" className="form-control" id="lastName" onChange={this.handleChange} aria-describedby="lastNameHelp" placeholder="Enter your last name"/>
+              <input type="text" className="form-control" id="lastName" onChange={this.handleChange} aria-describedby="lastNameHelp" placeholder="Enter your last name"/>
             </div>
             <div className="form-group">
               <label>Email address</label>
