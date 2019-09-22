@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 
 const ProjectList = ({projects}) => {
     const projectsList = projects.map(project => {
-      console.log(project.createdAt, 'aqui');
-      
       return (
-        <Link to={'project/' + project.id} key={ project.id }>
+        <Link to={'project/' + project.id} key={ project.id } className="text-decoration-none text-reset">
           <ProjectSummary project={project} projectKey={project.id}/>
         </Link>
       )

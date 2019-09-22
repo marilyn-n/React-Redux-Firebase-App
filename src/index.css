@@ -1,6 +1,7 @@
 html, body, #root, #root>div {
   height: 100%;
   margin: 0;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.28), rgb(167, 50, 136));
 }
 
 body {

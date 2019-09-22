@@ -5,21 +5,30 @@ import { connect } from 'react-redux';
 
 const SignInLinks = (props) => {
     return (
-      <ul className="nav justify-content-end">
-        <li className="nav-item">
-          <NavLink to="/create" className="nav-link">New Project</NavLink>
-        </li>
-        <div className="dropdown">
-        <button className="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          { props.profile.initials }
+      <nav className="navbar navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            lll
+          </span>
         </button>
-          <div className="dropdown-menu boots-dropdown" aria-labelledby="navbarDropdownMenuLink">
-            <Link to="/" className="dropdown-item">Action</Link>
-            <Link to="/" className="dropdown-item">Another action</Link>
-            <a className="dropdown-item" onClick={props.singOut}>Sign out</a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Hidden brand</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+              <NavLink to="/" className="nav-link">Dashboard</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/create" className="nav-link">New Project</NavLink>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link" onClick={props.singOut}>Sign out</a>
+            </li>
+            <li className="nav-item">
+              { props.profile.initials ? <button className="btn btn-outline-light" onClick={props.singOut}>{ props.profile.initials }</button> : ''}
+            </li>
+          </ul>
         </div>
-      </ul>
+      </nav>
     );
 }
 

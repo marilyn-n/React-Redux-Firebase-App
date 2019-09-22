@@ -10,19 +10,14 @@ const Sidebar = (props) => {
     const links = auth.uid ? <SignInLinks profile={profile}/> : <SignOutLinks/>
     return (
       <div>
-        <ul className="navbar bg-dark boots-navbar">
-          <li className="nav-item">
-            <NavLink to="/" className="nav-link">Dashboard</NavLink>
-          </li>
+        <div className="navbar bg-dark boots-navbar">
           { links }
-        </ul>
+        </div>
       </div>
     );
 }
 
 const mapStateToProps = (state) => {
-  console.log(state, 'navbar state');
-  
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile

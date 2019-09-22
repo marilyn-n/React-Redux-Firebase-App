@@ -15,7 +15,7 @@ export class Dashboard extends Component {
 
     return (
       <div className="dashboard container">
-          <div className="row">
+          <div className="row my-3">
             <div className="project-list col col-sm-6 col-md-6">
               <ProjectList projects={projects}/>
             </div>
