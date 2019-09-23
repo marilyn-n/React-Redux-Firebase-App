@@ -12,7 +12,6 @@ const SignInLinks = (props) => {
           </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">Hidden brand</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
               <NavLink to="/" className="nav-link">Dashboard</NavLink>
@@ -23,8 +22,8 @@ const SignInLinks = (props) => {
             <li className="nav-item">
               <a href="#" className="nav-link" onClick={props.singOut}>Sign out</a>
             </li>
-            <li className="nav-item">
-              { props.profile.initials ? <button className="btn btn-outline-light" onClick={props.singOut}>{ props.profile.initials }</button> : ''}
+            <li className="nav-item initials">
+              { props.profile.initials ? props.profile.initials : ''}
             </li>
           </ul>
         </div>
