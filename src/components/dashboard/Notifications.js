@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
-export class Notifications extends Component {
-  render() {
+const Notifications = (props) => {
+    const { notifications } = props;
+     
     return (
       <div className="notifications">
           <div className="card text-dark bg-light mb-3">
             <div className="card-header">Notifications</div>
             <ul className="list-group list-group-flush">
-              <li className="list-group-item">Notification</li>
-              <li className="list-group-item">Notification</li>
-              <li className="list-group-item">Notification</li>
-              <li className="list-group-item">Notification</li>
-              <li className="list-group-item">Notification</li>
+             {notifications && notifications.map(item => {
+               return (
+                 <li className="list-item" key={item.id}>
+                   <span>{ item.user } </span>
+                   <span>{ item.content} </span>
+                   <div className="text-gray">{ moment(item.time.toDate()).fromNow() }</div>
+                 </li>
+               )
+             }) }
             </ul>
-            {/* <div className="card-footer bg-transparent border-dark">Footer</div> */}
           </div>
       </div>
     );
-  }
 }
 
 export default Notifications;

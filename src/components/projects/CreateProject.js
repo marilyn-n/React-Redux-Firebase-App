@@ -13,6 +13,7 @@ class CreateProject extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.createProject(this.state)
+    this.props.history.push('/');
   }
 
   handleChange = (e) => {
@@ -24,8 +25,7 @@ class CreateProject extends Component {
   render() {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to={'/signin'} />
-
-
+    
     return (
       <div className="container col-md-6 offset-md-3 create-project my-3">
         <div className="card">
